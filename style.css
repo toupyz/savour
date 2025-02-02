@@ -1,150 +1,154 @@
-body{
-    background-color: rgb(45, 45, 45);
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
 header {
-    background-color: rgb(50, 50, 50);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    z-index: 1000;
-    overflow: hidden;
-  }
-  
-  header .nav-text {
+    background-color: rgba(92, 217, 255);
     color: white;
-    font-size: 1.2rem;
-    animation: slideIn 0.5s ease-out;
-    text-align: center;
-    float: right;
-  }
-  
-  header ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  
-  header li {
-    margin: 0 15px;
-    float: right;
-  }
-  
-  header a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    float: right;
-  }
-  
-  header a:hover,
-  header a.active {
-    background-color: rgb(85, 85, 85);
-    border-radius: 5px;
-    color: rgb(92, 216, 255);
-  }
-
-/* Animations */
-@keyframes slideIn {
-    from {
-      opacity: 0;
-      transform: translateX(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
-
-h1{
-    text-align: center;
-    color: white;
+    padding: 20px;
 }
 
-/* Centered Home Page */
-#about {
-    margin-top: 60px; /* To offset the fixed navbar */
-    height: 135vh; /* Full viewport height */
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+h1 {
+    margin-top: 10px;
+}
+
+.description {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 18px;
+}
+
+/*Products*/
+.products {
+    text-align: center;
+    padding: 20px;
+}
+
+.product-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 2px solid #4CAF50;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.product-info {
+    text-align: left;
+}
+
+.product-info h3 {
+    margin: 0;
+    color: #4CAF50;
+}
+
+.product-info p {
+    font-size: 14px;
+}
+
+/*Team section*/
+.team {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.team h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;  
+}
+
+.team img {
+    width: 650px;  /*Image size here*/
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;  
+}
+
+.team p {
+    font-size: 16px;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+}
+
+/*Market Section*/
+.markets {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    border-color: rgb(0,0,0);
+}
+
+.markets .images {
     display: flex;
     justify-content: center;
-    align-items: center;
-  }
-  
-  .about-container {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.markets .images div {
+    background-color: rgba(255, 255, 255); 
+    border: 2px solid rgb(92, 216, 255); 
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;  
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.markets .images img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/*Footer*/
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    max-width: 800px;
-  }
-  
-  .profile-section {
-    margin-bottom: 20px;
-  }
-  
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .profile-pic:hover {
-    transform: scale(1.1);
-  }
-  
-  .location {
-    font-size: 1rem;
-    color: rgb(155, 155, 155);
-  }
-  
-  .description h1 {
-    margin-bottom: 10px;
-    font-size: 2.5rem;
-  }
-  
-  .description p {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    color: rgb(175, 175, 175);
-  }
-  
-  
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header .nav-text {
-      font-size: 1rem;
-    }
-  
-    .description h1 {
-      font-size: 2rem;
-    }
-  
-    .description p {
-      font-size: 1rem;
-    }
-  
-    .skills img {
-      width: 40px;
-      height: 40px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    header ul {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    header li {
-      margin: 5px 0;
-    }
-  }
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin: 0 15px;
+    font-size: 40px; 
+    color: white; 
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: rgb(92, 216, 255);
+}
+
