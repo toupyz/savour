@@ -16,15 +16,10 @@ nav {
     height: 60px;
     background-color: rgb(92, 217, 255);
     display: flex;
-    justify-content: space-between;  /* Ensures space between logo and links */
+    justify-content: space-between; 
     align-items: center;
-    padding: 0 20px;  /* Adds padding for better spacing */
+    padding: 0 20px;  
 }
-
-.logo {
-    height: 40px; /* Adjust height as necessary */
-}
-
 .links-container {
     height: 100%;
     display: flex;
@@ -125,6 +120,7 @@ h1 {
     margin: 20px auto;
     font-size: 18px;
     text-align: center;
+    padding: 10px;
 }
 
 /*Products*/
@@ -226,6 +222,10 @@ h1 {
     border-radius: 5px;
     margin-top: 10px;
 }
+
+/*Timeline*/
+
+
 
 /*Footer*/
 footer {
