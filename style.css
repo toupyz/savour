@@ -285,7 +285,7 @@ header p { /* Timeline date */
     position: absolute;
     font-size: 14px;
     padding: 5px 10px;
-    border: 1px solid grey;
+    border: 1px solid rgb(0, 0, 0);
     border-radius: 15px;
     background: rgb(255, 255, 255,);
     color: rgb(0, 53, 89);
@@ -306,15 +306,33 @@ header p { /* Timeline date */
     display: table;
     clear: both;
 }
+
+/* Image Container - Positioned Next to the Timeline */
+.image-container {
+    display: flex; /* Use flexbox to arrange images side by side */
+    gap: 10px; /* Space between images */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-30%);
+    width: auto;
+}
+/* Odd Blocks - Images on Left */
+.block:nth-child(odd) .image-container {
+    left: calc(100% + 40px); /* Image container positioned to the right of the timeline */
+}
+/* Even Blocks - Images on Right */
+.block:nth-child(even) .image-container {
+    right: calc(100% + 40px); /* Image container positioned to the left of the timeline */
+}
 /* Image Styling */
 .image-container img {
-    max-width: 100%;
+    width: auto; /* Control the width of each image */
     height: auto;
-    max-height: 180px; /* Ensures images don't stretch */
+    max-height: 180px; /* Ensures images don't stretch vertically */
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-right: 2px;
-    margin-left: 2px;
 }
 /* Responsive Timeline*/
 @media(max-width: 630px){
@@ -328,35 +346,43 @@ header p { /* Timeline date */
 }
 .blocks{
     padding-left: 20px;
+    margin-right: 20px;
 }
 .block{
     width: 90%;
-    margin-right: 10px;
-    margin-left: 15PX;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 .block::before, .block:nth-child(even){
     left: -13px;
 }
 
 .block:nth-child(even){
-    left: 11px;
+    left: 17px;
 }
 header p{
     position: static;
     border: none;
     margin-bottom: 10px;
 }
+.image-container {
+    position: relative; /* Adjusted for mobile */
+    top: auto;
+    transform: translateY(0);
+    width: 100%; /* Let it fill up the available space */
+    justify-content: space-evenly; /* Distribute images evenly */
+}
 .image-container img {
     max-width: 100%;
-    height: auto;
-    max-height: 120px; /* Ensures images don't stretch */
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-right: 2px;
-    margin-left: 2px;
-    }
+    max-height: 120px;
 }
-
+.block:nth-child(odd) .image-container {
+    left: 0; /* Adjusted for mobile */
+}
+.block:nth-child(even) .image-container {
+    right: 0; /* Adjusted for mobile */
+}
+}
 
 /*Footer*/
 footer {
