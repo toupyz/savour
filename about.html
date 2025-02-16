@@ -45,11 +45,35 @@
         <span class="counter" data-target="1000"></span>
     </div>
     
-
-    <br>
-    <br>
-    <br>
-    <br>
+    <section class="team">
+        <h2>Savour Team</h2>
+        <div class="team-members">
+            <div class="member">
+                <img src="images/team/marketing.png" alt="marketing">
+            </div>
+            <div class="member">
+                <img src="images/team/operations.png" alt="operations">
+            </div>
+            <div class="member">
+                <img src="images/team/finance.png" alt="finance">
+            </div>
+            <div class="member">
+                <img src="images/team/sales.png" alt="sales">
+            </div>
+            <div class="member">
+                <img src="images/team/digital.png" alt="digital">
+            </div>
+            <div class="member">
+                <img src="images/team/sustainability.png" alt="sustainability">
+            </div>
+            <div class="member">
+                <img src="images/team/secretaries.png" alt="secretaries">
+            </div>
+            <div class="member">
+                <img src="images/team/manager.png" alt="manager">
+            </div>
+        </div>
+    </section>
 
 
     <footer>
@@ -70,13 +94,13 @@ counters.forEach(counter => {
     const updateCounter = () => {
         const target = +counter.getAttribute('data-target');
         const count = +counter.innerText;
-        const increment = target / 1250;
+        const increment = target / 500;
 
         if(count < target) {
             counter.innerText = Math.ceil(count + increment);
             setTimeout(updateCounter, 2);
         } else {
-            counter.innerText = target.toLocaleString() + '+';  // Add the plus sign here
+            counter.innerText = target.toLocaleString() + '+'; 
         }
     };
     
