@@ -1,3 +1,4 @@
+//Crips packets recycled counter
 const counters = document.querySelectorAll('.counter');
 counters.forEach(counter => {
     counter.innerText = '0';
@@ -6,7 +7,6 @@ counters.forEach(counter => {
         const target = +counter.getAttribute('data-target');
         const count = +counter.innerText;
         const increment = target / 500;
-
         if(count < target) {
             counter.innerText = Math.ceil(count + increment);
             setTimeout(updateCounter, 2);
@@ -14,6 +14,6 @@ counters.forEach(counter => {
             counter.innerText = target.toLocaleString() + '+'; 
         }
     };
-    
     updateCounter();
 });
+
