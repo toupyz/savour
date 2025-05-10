@@ -35,7 +35,6 @@ nav a {
     text-decoration: none;
     color: white;
     border-radius: 10px;
-    background-color: rgb(92, 217, 255);
 }
 
 nav a:hover {
@@ -136,7 +135,6 @@ h1 {
     margin: 20px auto;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 .product-card img {
     width: 150px;
     height: auto;
@@ -144,20 +142,31 @@ h1 {
     margin-right: 15px;
     
 }
-
 .product-info {
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
 }
-
 .product-info h3 {
     margin: 0;
     color: rgb(76, 175, 80);
 }
-
 .product-info p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
+}
+.product-card a{
+    height: 100%;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    background-color: rgb(92, 217, 255);
+    margin-top: 10px;
+}
+.product-card a:hover{
+    background-color: rgb(0, 53, 89);
 }
 
 /*Team section*/
